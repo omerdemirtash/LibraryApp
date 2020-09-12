@@ -67,7 +67,7 @@ public class BooksModulePage extends BasePage {
 
 
 
-    public void inputBookInfoDDT(String book, String author, String desc, String isbn, String year) {  // try data driven testing
+    public void inputBookInfoDDT(String book, String author, String desc, String isbn, String year) throws InterruptedException {  // try data driven testing
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         wait.until(ExpectedConditions.visibilityOf(bookNameBox));
@@ -86,6 +86,8 @@ public class BooksModulePage extends BasePage {
         yearNameBox.sendKeys(year);
 
         saveChangesButton.click();
+
+        Thread.sleep(2000);
 
 
     }

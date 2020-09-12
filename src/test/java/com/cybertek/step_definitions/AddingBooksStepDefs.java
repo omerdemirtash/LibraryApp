@@ -51,10 +51,8 @@ public class AddingBooksStepDefs {
     @Then("Librarian enters book {string} and {string} and {string} and {string} and {string} and clicks save changes")
     public void librarianEntersBookAndAndAndAndAndClicksSaveChanges(String book, String author, String desc, String isbn, String year) throws InterruptedException {
 
-
-
         booksModulePage.clickAddBookButton();
-        booksModulePage.inputBookInfoDDT(book, author, desc, isbn, year);
+        booksModulePage.inputBookInfoDDT(book,author,desc,isbn,year);
 
 
 
