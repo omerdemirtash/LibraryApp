@@ -8,8 +8,8 @@ import org.junit.runners.Parameterized;
 public class Hooks {
 
 @After
-    public void tearDown(){
-    Driver.closeDriver();
+    public static void tearDown(){
+    Driver.getDriver().close();
 }
 
 

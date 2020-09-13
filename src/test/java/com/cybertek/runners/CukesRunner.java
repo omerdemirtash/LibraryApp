@@ -9,11 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         plugin = {
-                "json:target/cucumber.json"
+                "json:target/cucumber.json",
+                "html:target/cucumber-reports",
         },
         features = "src/test/resources/features",
         glue = "com/cybertek/step_definitions",
-        tags = "@addingManyBooks"
+        tags = "@editBook"
 
 
 

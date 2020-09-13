@@ -3,6 +3,7 @@ package com.cybertek.pages;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -87,9 +88,33 @@ public class BooksModulePage extends BasePage {
 
         saveChangesButton.click();
 
-        Thread.sleep(2000);
 
 
+
+    }
+
+
+    public void EditBookInfo() {  // try data driven testing
+        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
+        wait.until(ExpectedConditions.visibilityOf(bookNameBox));
+        bookNameBox.clear();
+        bookNameBox.sendKeys("Funny Guy With No Nose");
+
+        wait.until(ExpectedConditions.elementToBeClickable(authorNameBox));
+        authorNameBox.sendKeys("J.K. Rowling");
+
+        wait.until(ExpectedConditions.elementToBeClickable(descriptionNameBox));
+        descriptionNameBox.sendKeys("Throughout the series, Harry is described as having his father's perpetually untidy black hair, his mother's bright green eyes, and a lightning bolt-shaped scar on his forehead. ");
+
+        wait.until(ExpectedConditions.elementToBeClickable(isbnNameBox));
+        isbnNameBox.sendKeys(ConfigurationReader.getProperty("isbn"));
+
+        wait.until(ExpectedConditions.elementToBeClickable(yearNameBox));
+        yearNameBox.sendKeys("2000");
+
+        saveChangesButton.click();
     }
 
 

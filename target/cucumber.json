@@ -3,20 +3,20 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-12T23:23:36.978Z",
-        "line": 18,
-        "name": "Librarian has access to add books into system",
+        "start_timestamp": "2020-09-12T23:49:16.299Z",
+        "line": 4,
+        "name": "Librarian can edit book",
         "description": "",
-        "id": "adding-books;librarian-has-access-to-add-books-into-system;;2",
+        "id": "edit-book;librarian-can-edit-book",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4387000000,
+              "duration": 4454000000,
               "status": "passed"
             },
-            "line": 13,
+            "line": 5,
             "name": "Librarian is logged in and on the Books module",
             "match": {
               "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
@@ -25,224 +25,69 @@
           },
           {
             "result": {
+              "duration": 4061000000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "Librarian clicks add book icon",
+            "line": 6,
+            "name": "Librarian clicks Edit Book icon for Harry Potter book",
             "match": {
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
+              "location": "com.cybertek.step_definitions.EditBookStepDefs.librarianClicksEditBookIconForHarryPotterBook()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 5249000000,
               "status": "passed"
             },
-            "line": 15,
-            "name": "Librarian enters book \"Lord of The Rings\" and \"JRR Tolkien\" and \"Nerdy book about rings\" and \"20302010\" and \"1999\" and clicks save changes",
+            "line": 7,
+            "name": "Librarian changes the book name to Funny Guy With No Nose and clicks save changes",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Lord of The Rings\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"JRR Tolkien\"",
-                  "offset": 46
-                },
-                {
-                  "val": "\"Nerdy book about rings\"",
-                  "offset": 64
-                },
-                {
-                  "val": "\"20302010\"",
-                  "offset": 93
-                },
-                {
-                  "val": "\"1999\"",
-                  "offset": 108
-                }
-              ],
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarianEntersBookAndAndAndAndAndClicksSaveChanges(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+              "location": "com.cybertek.step_definitions.EditBookStepDefs.librarianChangesTheBookNameToFunnyGuyWithNoNoseAndClicksSaveChanges()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The book has been updated",
+            "match": {
+              "location": "com.cybertek.step_definitions.EditBookStepDefs.theBookHasBeenUpdated()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@smoke"
+            "name": "@editBook"
           },
-          {
-            "name": "@addingManyBooks"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-09-12T23:23:46.683Z",
-        "line": 19,
-        "name": "Librarian has access to add books into system",
-        "description": "",
-        "id": "adding-books;librarian-has-access-to-add-books-into-system;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain \"login\". Current url: \"http://library2.cybertekschool.com/#dashboard\" (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Heenas-MacBook-Pro.local\u0027, ip: \u00272601:2c7:4480:5fb0:0:0:0:2045%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/_l/2cnbphd1293...}, goog:chromeOptions: {debuggerAddress: localhost:55832}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 32968970f10c3308a73f0632bcadfe29\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.cybertek.pages.LoginPage.LoginMethod(LoginPage.java:24)\n\tat com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module(AddingBooksStepDefs.java:25)\n\tat ✽.Librarian is logged in and on the Books module(file:///Users/heenadhanani-afzal/IdeaProjects/cybertek-library-app/src/test/resources/features/AddingBook.feature:13)\n",
-              "duration": 10371000000,
-              "status": "failed"
-            },
-            "line": 13,
-            "name": "Librarian is logged in and on the Books module",
-            "match": {
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "Librarian clicks add book icon",
-            "match": {
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "Librarian enters book \"Becoming Obama\" and \"Michelle Obama\" and \"A book about a  lady\" and \"2939939393\" and \"2020\" and clicks save changes",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Becoming Obama\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Michelle Obama\"",
-                  "offset": 43
-                },
-                {
-                  "val": "\"A book about a  lady\"",
-                  "offset": 64
-                },
-                {
-                  "val": "\"2939939393\"",
-                  "offset": 91
-                },
-                {
-                  "val": "\"2020\"",
-                  "offset": 108
-                }
-              ],
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarianEntersBookAndAndAndAndAndClicksSaveChanges(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
           {
             "name": "@smoke"
-          },
-          {
-            "name": "@addingManyBooks"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-09-12T23:23:57.067Z",
-        "line": 20,
-        "name": "Librarian has access to add books into system",
-        "description": "",
-        "id": "adding-books;librarian-has-access-to-add-books-into-system;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain \"login\". Current url: \"http://library2.cybertekschool.com/#dashboard\" (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Heenas-MacBook-Pro.local\u0027, ip: \u00272601:2c7:4480:5fb0:0:0:0:2045%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/_l/2cnbphd1293...}, goog:chromeOptions: {debuggerAddress: localhost:55832}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 32968970f10c3308a73f0632bcadfe29\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat com.cybertek.pages.LoginPage.LoginMethod(LoginPage.java:24)\n\tat com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module(AddingBooksStepDefs.java:25)\n\tat ✽.Librarian is logged in and on the Books module(file:///Users/heenadhanani-afzal/IdeaProjects/cybertek-library-app/src/test/resources/features/AddingBook.feature:13)\n",
-              "duration": 10321000000,
-              "status": "failed"
-            },
-            "line": 13,
-            "name": "Librarian is logged in and on the Books module",
-            "match": {
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 14,
-            "name": "Librarian clicks add book icon",
-            "match": {
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "Librarian enters book \"IT\" and \"Stephen King\" and \"Scary book about clowns and spiders\" and \"30209494994\" and \"1985\" and clicks save changes",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"IT\"",
-                  "offset": 22
-                },
-                {
-                  "val": "\"Stephen King\"",
-                  "offset": 31
-                },
-                {
-                  "val": "\"Scary book about clowns and spiders\"",
-                  "offset": 50
-                },
-                {
-                  "val": "\"30209494994\"",
-                  "offset": 92
-                },
-                {
-                  "val": "\"1985\"",
-                  "offset": 110
-                }
-              ],
-              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarianEntersBookAndAndAndAndAndClicksSaveChanges(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@smoke"
-          },
-          {
-            "name": "@addingManyBooks"
           }
         ]
       }
     ],
-    "name": "Adding Books",
+    "name": "Edit book",
     "description": "",
-    "id": "adding-books",
+    "id": "edit-book",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AddingBook.feature",
+    "uri": "file:src/test/resources/features/EditBook.feature",
     "tags": [
+      {
+        "name": "@editBook",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
       {
         "name": "@smoke",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 2
+          "column": 11
         }
       }
     ]
