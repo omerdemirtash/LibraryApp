@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-12T23:49:16.299Z",
+        "start_timestamp": "2020-09-13T00:30:04.846Z",
         "line": 4,
         "name": "Librarian can edit book",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4454000000,
+              "duration": 3966000000,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 4061000000,
+              "duration": 4056000000,
               "status": "passed"
             },
             "line": 6,
@@ -48,6 +48,7 @@
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 8,
