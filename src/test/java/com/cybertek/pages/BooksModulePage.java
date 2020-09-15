@@ -37,16 +37,15 @@ public class BooksModulePage extends BasePage {
     private WebElement saveChangesButton;
 
     public void clickAddBookButton() throws InterruptedException {
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        wait.until(ExpectedConditions.urlContains("books"));
-        Thread.sleep(2000);
         addBooksButton.click();
+        Thread.sleep(1000);
     }
 
 
     public void inputBookInfo() {  // try data driven testing
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 
         wait.until(ExpectedConditions.visibilityOf(bookNameBox));
         bookNameBox.sendKeys(ConfigurationReader.getProperty("bookName"));
@@ -69,7 +68,7 @@ public class BooksModulePage extends BasePage {
 
 
     public void inputBookInfoDDT(String book, String author, String desc, String isbn, String year) throws InterruptedException {  // try data driven testing
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       // Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         wait.until(ExpectedConditions.visibilityOf(bookNameBox));
         bookNameBox.sendKeys(book);
@@ -127,7 +126,10 @@ public class BooksModulePage extends BasePage {
     private WebElement searchBox;
 
     public void confirmBookDisplayed() throws InterruptedException {
-        wait.until(ExpectedConditions.elementToBeClickable(searchBox));
+       // wait.until(ExpectedConditions.elementToBeClickable(searchBox));
+
+
+        Thread.sleep(5000);
         searchBox.sendKeys(ConfigurationReader.getProperty("bookName"));
 
         Thread.sleep(1000);

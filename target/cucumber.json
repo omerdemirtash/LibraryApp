@@ -3,20 +3,20 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-13T00:30:04.846Z",
-        "line": 4,
-        "name": "Librarian can edit book",
+        "start_timestamp": "2020-09-15T09:18:52.424Z",
+        "line": 5,
+        "name": ": Librarian has access to add books into system",
         "description": "",
-        "id": "edit-book;librarian-can-edit-book",
+        "id": "adding-books;:-librarian-has-access-to-add-books-into-system",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3966000000,
+              "duration": 14319000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "Librarian is logged in and on the Books module",
             "match": {
               "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
@@ -25,70 +25,290 @@
           },
           {
             "result": {
-              "duration": 4056000000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "Librarian clicks Edit Book icon for Harry Potter book",
+            "line": 7,
+            "name": "Librarian clicks add book icon",
             "match": {
-              "location": "com.cybertek.step_definitions.EditBookStepDefs.librarianClicksEditBookIconForHarryPotterBook()"
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
             },
             "keyword": "When "
           },
           {
             "result": {
+              "duration": 2378000000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "Librarian changes the book name to Funny Guy With No Nose and clicks save changes",
+            "line": 8,
+            "name": "Librarian enters book information and clicks save changes",
             "match": {
-              "location": "com.cybertek.step_definitions.EditBookStepDefs.librarianChangesTheBookNameToFunnyGuyWithNoNoseAndClicksSaveChanges()"
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_enters_book_information_and_clicks_save_changes()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 17614000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "The book has been updated",
+            "line": 9,
+            "name": "Book is displayed",
             "match": {
-              "location": "com.cybertek.step_definitions.EditBookStepDefs.theBookHasBeenUpdated()"
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.book_is_displayed()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@editBook"
+            "name": "@smoke"
           },
           {
+            "name": "@addingOneBook"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-15T09:19:26.870Z",
+        "line": 18,
+        "name": "Librarian has access to add books into system",
+        "description": "",
+        "id": "adding-books;librarian-has-access-to-add-books-into-system;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10496000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Librarian is logged in and on the Books module",
+            "match": {
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Librarian clicks add book icon",
+            "match": {
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13364000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Librarian enters book \"Lord of The Rings\" and \"JRR Tolkien\" and \"Nerdy book about rings\" and \"20302010\" and \"1999\" and clicks save changes",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lord of The Rings\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"JRR Tolkien\"",
+                  "offset": 46
+                },
+                {
+                  "val": "\"Nerdy book about rings\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"20302010\"",
+                  "offset": 93
+                },
+                {
+                  "val": "\"1999\"",
+                  "offset": 108
+                }
+              ],
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarianEntersBookAndAndAndAndAndClicksSaveChanges(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
             "name": "@smoke"
+          },
+          {
+            "name": "@addingManyBooks"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-15T09:19:50.741Z",
+        "line": 19,
+        "name": "Librarian has access to add books into system",
+        "description": "",
+        "id": "adding-books;librarian-has-access-to-add-books-into-system;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10468000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Librarian is logged in and on the Books module",
+            "match": {
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Librarian clicks add book icon",
+            "match": {
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13401000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Librarian enters book \"Becoming Obama\" and \"Michelle Obama\" and \"A book about a  lady\" and \"2939939393\" and \"2020\" and clicks save changes",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Becoming Obama\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Michelle Obama\"",
+                  "offset": 43
+                },
+                {
+                  "val": "\"A book about a  lady\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"2939939393\"",
+                  "offset": 91
+                },
+                {
+                  "val": "\"2020\"",
+                  "offset": 108
+                }
+              ],
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarianEntersBookAndAndAndAndAndClicksSaveChanges(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@addingManyBooks"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-15T09:20:14.621Z",
+        "line": 20,
+        "name": "Librarian has access to add books into system",
+        "description": "",
+        "id": "adding-books;librarian-has-access-to-add-books-into-system;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10451000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Librarian is logged in and on the Books module",
+            "match": {
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_is_logged_in_and_on_the_books_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Librarian clicks add book icon",
+            "match": {
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarian_clicks_add_book_icon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13380000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Librarian enters book \"IT\" and \"Stephen King\" and \"Scary book about clowns and spiders\" and \"30209494994\" and \"1985\" and clicks save changes",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IT\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Stephen King\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Scary book about clowns and spiders\"",
+                  "offset": 50
+                },
+                {
+                  "val": "\"30209494994\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"1985\"",
+                  "offset": 110
+                }
+              ],
+              "location": "com.cybertek.step_definitions.AddingBooksStepDefs.librarianEntersBookAndAndAndAndAndClicksSaveChanges(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@addingManyBooks"
           }
         ]
       }
     ],
-    "name": "Edit book",
+    "name": "Adding Books",
     "description": "",
-    "id": "edit-book",
+    "id": "adding-books",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/EditBook.feature",
+    "uri": "file:src/test/resources/features/AddingBook.feature",
     "tags": [
-      {
-        "name": "@editBook",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
       {
         "name": "@smoke",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 11
+          "column": 2
         }
       }
     ]

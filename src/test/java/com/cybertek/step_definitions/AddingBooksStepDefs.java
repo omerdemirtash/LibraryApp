@@ -21,8 +21,10 @@ public class AddingBooksStepDefs {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
     @Given("Librarian is logged in and on the Books module")
-    public void librarian_is_logged_in_and_on_the_books_module() {
+    public void librarian_is_logged_in_and_on_the_books_module() throws InterruptedException {
+
         loginPage.LoginMethod();
+
         landingPage.clickBooksModule();
     }
 
@@ -37,7 +39,10 @@ public class AddingBooksStepDefs {
     public void librarian_enters_book_information_and_clicks_save_changes() throws InterruptedException {
 
        booksModulePage.clickAddBookButton();
-      booksModulePage.inputBookInfo();
+
+       booksModulePage.inputBookInfo();
+
+
     }
 
 
@@ -45,20 +50,22 @@ public class AddingBooksStepDefs {
     public void book_is_displayed() throws InterruptedException {
         booksModulePage.confirmBookDisplayed();
 
+        landingPage.logOut();
+
     }
 
 
     @Then("Librarian enters book {string} and {string} and {string} and {string} and {string} and clicks save changes")
     public void librarianEntersBookAndAndAndAndAndClicksSaveChanges(String book, String author, String desc, String isbn, String year) throws InterruptedException {
 
+
         booksModulePage.clickAddBookButton();
+
+
         booksModulePage.inputBookInfoDDT(book,author,desc,isbn,year);
 
 
-
-
-
-
+        landingPage.logOut();
 
 
     }

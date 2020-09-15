@@ -19,11 +19,15 @@ public class LoginPage extends BasePage {
     private WebElement submitButton;
 
 
-    public void LoginMethod(){
+    public void LoginMethod() throws InterruptedException {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
         wait.until(ExpectedConditions.urlContains("login"));
+
         emailBox.sendKeys(ConfigurationReader.getProperty("librarianusername"));
         passwordBox.sendKeys(ConfigurationReader.getProperty("librarianpassword"));
         submitButton.click();
+
+        Thread.sleep(5000);
     }
 }

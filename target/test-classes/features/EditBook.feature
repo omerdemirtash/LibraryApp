@@ -1,4 +1,4 @@
-@editBook @smoke
+@editBook
 Feature: Edit book
 
   Scenario: Librarian can edit book

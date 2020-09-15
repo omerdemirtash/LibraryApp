@@ -1,4 +1,4 @@
-@bookCategories @smoke
+@bookCategories
 Feature: Book categories filter
 
   Scenario: Librarian uses book categories filter to search for Drama books
